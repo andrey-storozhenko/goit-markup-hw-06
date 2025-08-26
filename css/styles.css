@@ -732,7 +732,7 @@ input.input-container[type='text'] {
   z-index: 1000;
 }
 
-.mobile-menu.active {
+.mobile-menu.is-open {
   right: 0;
 }
 .menu-close-btn {
