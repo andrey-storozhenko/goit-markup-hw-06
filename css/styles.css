@@ -25,6 +25,7 @@ body {
   line-height: 1.5;
   color: #434455;
   margin: 0;
+  overflow-x: hidden;
 }
 .container {
   max-width: 767px;
@@ -84,6 +85,8 @@ a {
   margin-bottom: 8px;
   text-align: center;
   font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .team-list {
   display: flex;
@@ -107,17 +110,6 @@ a {
   background: none;
   border: none;
   cursor: pointer;
-}
-.burger-menu-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3.6px;
-}
-
-.burger-menu-icon {
-  display: block;
 }
 
 .header-two {
@@ -167,6 +159,15 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   padding: 72px 16px;
+}
+@media (min-resolution: 192dpi) {
+  .solutions-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/people-office@2x.jpg);
+  }
 }
 
 .button-order {
@@ -439,9 +440,7 @@ a {
   gap: 16px;
 }
 .footer-logo-container {
-  width: 100%;
   text-align: center;
-  margin: 0 auto;
   margin-bottom: 72px;
 }
 .contact-us {
@@ -982,8 +981,14 @@ input.input-container[type='text'] {
     align-items: center;
     gap: 40px;
   }
-  .benefits-section li {
+  .benefits-item {
     width: calc((100% - 3 * 24px) / 4);
+  }
+  .team-section {
+    padding: 120px 0;
+  }
+  .benefits-section {
+    padding: 120px 0;
   }
   .logo {
     margin-right: 76px;
@@ -1015,19 +1020,31 @@ input.input-container[type='text'] {
   .portfolio-item {
     width: calc((100% - 2 * 24px) / 3);
   }
+  .portfolio-section {
+    padding: 120px 0;
+  }
   .portfolio-p {
     font-size: 14px;
   }
+  .footer-section {
+    padding: 100px 0;
+  }
   .footer-section .container {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0px;
   }
   .footer-logo-container {
     margin-right: 120px;
+    flex: 0 1 auto;
   }
   .footer-social {
     margin-right: 80px;
+    flex: 0 1 auto;
+    width: fit-content;
+  }
+  .contact-us {
+    flex: 0 1 auto;
+    width: fit-content;
   }
   .text-us-container {
     display: flex;
@@ -1038,6 +1055,14 @@ input.input-container[type='text'] {
     opacity: 1;
     width: 264px;
   }
+  .benefits-section .header-three {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .benefits-p {
+    font-weight: 400;
+    font-size: 16px;
+  }
   .nav-list {
     display: flex;
     align-items: center;
@@ -1045,7 +1070,13 @@ input.input-container[type='text'] {
   }
 
   .header-section {
-    padding: 0 16px;
+    padding: 0;
+  }
+  .header-section .container {
+    margin: 0 auto;
+  }
+  .nav-section {
+    width: fit-content;
   }
   .modal {
     width: 408px;
