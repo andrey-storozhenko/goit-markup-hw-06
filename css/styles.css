@@ -187,6 +187,7 @@ body {
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 120px;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1158px) {
